@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Cappen main page</title>
+
+    
+
+</head>
+
+<body>
+    <!-- main area, All code could be weitten in this div -->
+    <div id="img">
+
+        <!-- background image is created in this div -->
+        <div id="image"></div>
+
+        <!-- background color changing button  -->
+        <button><span>+</span></button>
+
+        <h1>Mousedown on the screen</h1>
+    </div>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script>
+        // var button = document.querySelector('button');
+        // var paragragh = document.querySelector('p');
+
+        // // setup the click listener
+        // button.addEventListener('click', changeText);
+
+        // function changeText() {
+        //     paragragh.textContent = 'Someone clicked the button';
+        // }
+
+        var button = document.querySelector('button');
+        var isBlack = false;
+
+        button.addEventListener('click', function () {
+
+            if (isBlack) {
+                document.body.style.background = 'black';
+                document.body.style.transition = '1s';
+                document.querySelector('button').style.background = 'white';
+                document.querySelector('button span').style.color = 'black';
+                document.querySelector('h1').style.color = 'white';
+
+            } else {
+                document.body.style.background = 'white';
+                document.body.style.transition = '1s';
+                document.querySelector('button').style.background = 'black';
+                document.querySelector('button span').style.color = 'white';
+                document.querySelector('h1').style.color = 'black';
+
+            }
+            isBlack = !isBlack;
+        })
+
+        $('button').mousedown(function () {
+            $('#image').css('display', 'none');
+        })
+            .mouseup(function () {
+                $('#image').css('display', 'block');
+            })
+
+
+        $('body').mousedown(function () {
+            // random function 
+            var random = Math.floor(Math.random() * 8) + 1;
+            var image = random + '.gif';
+            var url = 'url(' + image + ')';
+            // alert(url);
+
+            $('#image').html('<img src="none" alt="">');
+            $('img').attr('src', image);
+            $('button').css('display', 'block')
+        })
+            .mouseup(function () {
+                $('img').remove();
+            });
+    </script>
+
+    <script>
+
+    </script>
+    <!-- Assalomu alaykum web dasturlash kursiga qiziquvchi yoshlar hammagiz yaxshimisiz. Shu kunlarda nima ishlar bilan shug'ullanib yuribsizlar? Sizlar har kuni o'z ustingizda qattiq shug'illanishingiz kerak. Biz sizlar bilan faxrlanamiz va sizlarga ishonamiz. Sizlarni buyuk ishlar kutin turibdi, Inshoalloh sizlarning kelajagingiz buyukdir. Bizlarning kelajagimiz buyukdir Inshoalloh -->
+</body>
+
+</html>
