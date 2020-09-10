@@ -1,0 +1,284 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    background: black;
+    cursor: pointer;
+    box-sizing: border-box;
+    transition: 1s;
+}
+
+.border-area {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: transparent;
+    width: 88vw;
+    height: 93vh;
+    border: 3px solid #fff;
+    transition: .7s;
+}
+
+.isBorder {
+    border-color: black;
+}
+
+.inner-border-area {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: transparent;
+    width: 86.5vw;
+    height: 90vh;
+    border: 3px solid red;
+    transition: .7s;
+}
+
+/* #body{
+        width: 100%;
+        height: 100%;
+    } */
+
+#img {
+    width: 100%;
+    height: 100%;
+
+    
+}
+
+#image {
+    width: 100%;
+    height: 100%;
+}
+
+body img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.isBlackBg{
+    background: black;
+}
+
+.isWhiteBg{
+    background: white;
+}
+
+.isBlackCr{
+    color: black;
+}
+
+.isWhiteCr{
+    color: white;
+}
+
+button {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    outline: none;
+    border: none;
+    background: white;
+    transition: .8s;
+}
+
+button span{
+    color: black;
+    font-size: 30px;
+    transition: .8s;
+}
+
+h1 {
+    color: white;
+    font-family: sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    padding: 0;
+    margin: 0;
+    transition: .7s;
+    text-align: center;
+    color: white;
+}
+
+h3{
+    color: white;
+    background: black;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-size: 17px;
+    padding: 5px;
+    font-weight: 300;
+    position: absolute;
+    bottom: 12px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    transition: 1s;
+}
+
+.img-wrapper {
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 150px;
+    height: 85px;
+    display: block;
+}
+
+.img-wrapper img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 85px;
+    display: block;
+    object-fit: cover;
+}
+
+/* menu creation design css codes */
+
+.blog {
+    position: relative;
+    width: 150px;
+    height: 45px;
+}
+
+.face {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: .5s;
+}
+
+.face1 {
+    background: black;
+    z-index: 1;
+    transform-origin: bottom;
+    border: 1px solid #fff;
+}
+
+.face1 a,
+.face2 a {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 45px;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 1.2rem;
+    letter-spacing: 1.2;
+}
+
+.blog:hover .face.face1 {
+    transform: translateY(-100%) rotateX(90deg);
+    background: red;
+}
+
+.face2 {
+    background: black;
+    transform-origin: top;
+    border: 1px solid #fff;
+    transform: translateY(100%) rotateX(90deg);
+}
+
+.face2 a{
+    color: red;
+}
+
+.blog:hover .face.face2{
+    transform: translateY(0) rotateX(0deg);
+}
+
+.blog:nth-child(1) .face.face1,
+.blog:nth-child(1) .face.face2 {
+  border-left: none;  
+} 
+
+.blog:nth-child(2) .face.face1,
+.blog:nth-child(2) .face.face2 {
+  border-right: none;  
+} 
+
+
+/* menu positions */
+.blog:nth-child(1){
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    transform: translate(0, -50%);
+}
+
+.blog:nth-child(2){
+    position: absolute;
+    top: 50%;
+    right: 0px;
+    transform: translate(0, -50%);
+}
+
+.blog:nth-child(3){
+    position: absolute;
+    bottom: 40px;
+    left: 230px;   
+}
+
+.blog:nth-child(4){
+    position: absolute;
+    bottom: 40px;
+    right: 230px;  
+}
+
+
+
+
+/* @media (min-width: 980px) {
+
+    h1 {
+        font-size: 27px;
+    }
+}
+
+@media (max-width: 980px) {
+
+    h1 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 767px) {
+
+    h1 {
+        font-size: 20px;
+    }
+
+    button {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+    }
+}
+
+@media (max-width: 500px) {
+
+    h1 {
+        font-size: 16px;
+    }
+} */
